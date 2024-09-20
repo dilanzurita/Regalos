@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Grupo05</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="Landing Page/styles.css">
+</head>
+
+<body>
+
+    <header class="container">
+        <div class="row">
+            <div class="col-sm-12 my-4">
+                <!-- <a href="index.html mt-4">
+                    <img src="Landing Page/img/logo_gif.mp4" class="logo">
+                </a> -->
+                <center><h1 class="text-center display-3 text-uppercase font-weight-bold mt-4">Bienvenida a tu regalo mi amor</h1></center>
+            </div>
+            <!-- <div class="col-sm-6">
+                <img src="Landing Page/img/mano_herramientas.png" width="400px" class="img-fluid">
+            </div> -->
+            <div class="col-sm-6 text-center">
+                <p class="text-center text-description">Ingresa la fecha de la primera vez que salimos.
+                </p>
+                <form id="dateForm" onsubmit="return validateDate()">
+                    <input id="dateInput" class="form-control rounded-0 my-4 text-center" type="text" placeholder="dia/mes/año">
+                    <center>
+                        <a href="#" id="accessLink" class="a_btn" style="display:none;">Bienvenida, pulsa aqui para continuar</a>
+                        <p id="errorMessage" style="color:red; display:none;">Fecha errónea, intenta de nuevo</p>
+                    </center>
+                </form>
+            </div>
+            
+            <script>
+                function validateDate() {
+                    const correctDate = "26/12/2023";
+                    const dateInput = document.getElementById("dateInput").value;
+                    const accessLink = document.getElementById("accessLink");
+                    const errorMessage = document.getElementById("errorMessage");
+            
+                    if (dateInput === correctDate) {
+                        errorMessage.style.display = "none";
+                        accessLink.style.display = "block";
+                        accessLink.href = "startbootstrap-agency-gh-pages/index.html";
+                    } else {
+                        errorMessage.style.display = "block";
+                        accessLink.style.display = "none";
+                    }
+                    return false; // Prevent form submission
+                }
+            </script>
+                <!-- <ul class="list-unstyled list-inline mt-4">
+                    <li class="list-inline-item">
+                        <a href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>
